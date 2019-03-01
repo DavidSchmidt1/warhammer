@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Slicebox - 3D Image Slider with Fallback" />
+        <meta name="author" content="David Schmidt" />
+		
+       
+		<link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+		<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+	<title>Warhammer 2</title>
+</head>
+	<body>
+		<uberschrift>
+			<br>
+			<img id="titel"src="images/titel.jpg">
+			<h1></h1>
+		</uberschrift>
+		<!-- Slideshow container -->
+		<br>
+		<br>
+		<div class="container">
+
+			<div class="wrapper">
+
+				<ul id="sb-slider" class="sb-slider">
+					<li>
+						<a href="http://whfb-de.lexicanum.com/wiki/Tyrion" target="_blank"><img src="images/1.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Prinz Tyrion, Verteidiger von Ulthuan, Anführer der Hochelven</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://whfb-de.lexicanum.com/wiki/Malekith_(Person)" target="_blank"><img src="images/2.jpg" alt="image2"/></a>
+						<div class="sb-description">
+							<h3>Malekith, der Hexenkönig von Naggaroth, der Immerwährende</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://warhammerfantasy.wikia.com/wiki/Mazdamundi" target="_blank"><img src="images/3.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Mazdamundi, König der Solar-Stadt, mächtigster Magierpriester, Anführer der Echsenmenschen</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://whfb-de.lexicanum.com/wiki/Quiek_Kopfjäger" target="_blank"><img src="images/4.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Quiek Kopfjäger, Lord der Stadt Pillars, der wahre Anführer der Skaven</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://whfb-de.lexicanum.com/wiki/Settra" target="_blank"><img src="images/5.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Settra, der Unvergängliche, Hochkönig von Nehekhara, Anführer der Tomb Kings</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://whfb-de.lexicanum.com/wiki/Luthor_Harkon" target="_blank"><img src="images/6.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Luthor Harkon, verrückter Vampir, Anführer der Vampirküste</h3>
+						</div>
+					</li>
+				</ul>
+
+				
+
+				<div id="nav-arrows" class="nav-arrows">
+					<a href="#">Next</a>
+					<a href="#">Previous</a>
+				</div>
+
+			</div><!-- /wrapper -->
+		
+		</div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.slicebox.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				
+				var Page = (function() {
+
+					var $navArrows = $( '#nav-arrows' ).hide(),
+						$shadow = $( '#shadow' ).hide(),
+						slicebox = $( '#sb-slider' ).slicebox( {
+							onReady : function() {
+
+								$navArrows.show();
+								$shadow.show();
+
+							},
+							orientation : 'r',
+							cuboidsRandom : true,
+							disperseFactor : 30
+						} ),
+						
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							// add navigation events
+							$navArrows.children( ':first' ).on( 'click', function() {
+
+								slicebox.next();
+								return false;
+
+							} );
+
+							$navArrows.children( ':last' ).on( 'click', function() {
+								
+								slicebox.previous();
+								return false;
+
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+
+				Page.init();
+
+			});
+		</script>
+	</body>
+</html>

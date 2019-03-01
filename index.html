@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="de">
+	<!--Idee fürs LAyout: -->
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+
+		<title>Warhammer</title>
+	</head>
+	<body>
+		<div id="uberschrift" style="display:block">
+			
+			<img id="titel" src="images/titel.jpg">
+			<h1></h1>
+			
+		<erklaerung style="display:block">
+			<einleitung>
+				Warhammer cool... aber was ist das?
+			</einleitung>
+			<br>
+			<a onclick="ausblenden('#uberschrift','#main')"  ><img id="arrow" src="images/arrow-down.png" ></a>
+		</div>	
+	<div class="area"></div><nav class="main-menu">
+            <ul>
+                <li>
+                    <a onclick="allesweg('#uberschrift')" href="">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+							Start
+							
+                        </span>
+                    </a>
+                  
+                </li>
+                <li class="has-subnav">
+                    <a onclick="allesweg('#main')" href="#main">
+                        <i class="fa fa-laptop fa-2x"></i>
+                        <span class="nav-text">
+                            Erklärung
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a onclick="allesweg('#tabletop')" href="#tabletop">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                            Brettspiel
+                        </span>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a onclick="allesweg('#vermintide')" href="#vermintide">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Vermintide
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="allesweg('#warhammer')" href="#warhammer">
+                        <i class="fa fa-font fa-2x"></i>
+                        <span class="nav-text">
+                           Warhammer
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a href="#" onClick="window.close()">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+			<br>
+			<hauptteil  id="main" style="display:none">
+					
+				
+						<a   onclick="ausblenden('#main','#uberschrift')" ><img id="arrow" src="images/arrow-up.png" ></a>
+						<br>
+					
+					
+						<p style="text-align: justify; margin: 50px">
+						Warhammer began als eine Idee, eine Idee des "Warhammer-Universums" Schöpfers  <mark> Games Workshop</mark>.
+						Diese Idee löste eine Kettenreaktion aus. Plötzlich erwachte das Universum zum Leben, verschiedenste Leute
+						schrieben Bücher über das "Warhammer-Universum", alleine im Jahr 2004 wurden elf volle Bücher geschrieben. 
+						Bis heute sind <mark>371</mark> Bücher enstanden <mark>371!!!</mark>
+						</p>
+					
+						<br>
+						</p>
+				<a onclick="ausblenden('#main','#tabletop')"  ><img id="arrow" src="images/arrow-down.png" ></a>
+				
+			</hauptteil>
+		</erklaerung>
+			
+			<beispiele>
+				<ul style="list-style: none">
+					<li id="tabletop" style="display:none" >
+						<a  onclick="ausblenden('#tabletop','#main')"><img id="arrow" src="images/arrow-up.png" ></a>
+						<br> 
+						<zwischen>Das erste Spiel war eine Art Brettspiel:</zwischen>
+						<br> 
+						<img  src="images/tabletop.jpg" title="Ein Spiel in voller Fahrt" >
+						<br> 
+						So sehen die einzelnen Figuren aus:
+						<br> 
+						<img id="einheiten" src="images/tabletopcavalry.jpg" title="Kavalarie" >
+						<br> 
+						Die Regeln sind sehr Kompliziert zudem sind die Anschaffungskosten sehr hoch deswegen
+						hatt sich das Spiel nicht wirklich durchsetzten können. Aber wer noch mehr über die Regeln wissen will
+						Klickt <a href="https://www.youtube.com/watch?v=DhEnMyH2F4s">hier</a> für eine Video Erklärung(Achtung mehrteilich!).
+						<br>
+						<br>
+						<a  onclick="ausblenden('#tabletop','#platzhalter')" ><img id="arrow" src="images/arrow-down.png" ></a>
+					</li>
+					<li id="platzhalter" style="display:none">
+							<a  onclick="ausblenden('#platzhalter','#tabletop')"><img id="arrow" src="images/arrow-up.png" ></a>
+							<br>
+							<br>
+							<br>
+							<br>
+							Dannach folgten viele uninteressante Spiele bis...
+							<br>
+							<br>
+							<br>
+							<br>
+							<a  onclick="ausblenden('#platzhalter','#vermintide')"><img id="arrow" src="images/arrow-down.png" ></a>
+					</li>
+					<li id="vermintide" style="display:none">
+							<a  onclick="ausblenden('#vermintide','#platzhalter')"><img id="arrow" src="images/arrow-up.png" ></a>
+							<br> 
+							<zwischen2>Warhammer: End Times – Vermintide</zwischen2>
+							<br> 
+							<br> 
+							<img id="titel" src="images/vermintide.jpg">
+							<br> 
+							<p>
+							In Warhammer-Vermintide spielst du einen von fünf Charakteren. Die im Coop-Modus versuchen sich durch Horden von Gegner zu kämpfen.
+							Das Spiel ist auf Action ausgelegt und die Steuerung funktioniert durch den First-Person Blickwinkel.
+							</p>
+							<br>
+							
+							<p >Das Spiel ist sehr Düster und Blutig deswegen auch nicht für jeden was. Hier eine kleine Vorschau:</p>
+							<a id="erweitern" onclick="ausblenden('#erweitern','#videovermintide'); ">+</a>
+							<br>
+							
+							<iframe id="videovermintide" style="display:none" src="//coub.com/embed/fdnhy?muted=true&originalSize=true&startWithHD=true" allowfullscreen frameborder="0" width="1280" height="720"></iframe><script async src="//c-cdn.coub.com/embed-runner.js"></script>
+							<br>
+							
+							<a   onclick="ausblenden('#vermintide','#warhammer')"><img id="arrow" src="images/arrow-down.png" ></a>
+
+							
+					</li>
+					<li id="warhammer" style="display:none">
+						<a  onclick="ausblenden('#warhammer','#vermintide')" ><img id="arrow" src="images/arrow-up.png" ></a>
+						<br>
+						<br>
+						<zwischen3>Total War: Warhammer</zwischen3>
+						<br>
+						<br>
+						<br>
+						Klick mal drauf.
+						<br>
+						<a href="warhammer1.html" ><img id="warhammer1" src="images/warhammer1.png" ></a>
+						
+						<br>
+						
+						<br>
+						<a  onclick="ausblenden('#warhammer','#wartung')"><img id="arrow" src="images/arrow-down.png" ></a>
+					</li>
+					<li id="wartung" style="display:none">
+						
+						Wir arbeiten noch an der Vervollständigung. 
+						<br>
+						<br>
+
+						<img src="images/wartung.jpg" >
+						
+						
+						
+					</li>
+					
+				</ul>
+			</beispiele>
+		
+			
+
+		
+	
+	
+
+	</body>
+	
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	function ausblenden(weg,hin){
+		
+		$(weg).slideUp(1000)
+		$(hin).slideDown(1000);
+		
+	}
+	function allesweg(hin)
+	{
+		$('#wartung').css({
+			'display': 'none'
+    	});
+	    $('#main').css({
+			'display': 'none'
+    	});
+		$('#uberschrift').css({
+			'display': 'none'
+    	});
+		$('#platzhalter').css({
+			'display': 'none'
+    	});
+		$('#vermintide').css({
+			'display': 'none'
+    	});
+		$('#warhammer').css({
+			'display': 'none'
+    	});
+		$('#tabletop').css({
+			'display': 'none'
+    	});
+		
+		$(hin).css({
+        	'display': 'inline'			
+   		});
+
+	}
+</script>
